@@ -1,0 +1,18 @@
+@use "../settings/variables" as *;
+
+@mixin container {
+  width: min(100% - 2rem, $container-width);
+  margin-inline: auto;
+}
+
+@mixin respond-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin respond-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../globals" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: $spacing-3xl;
+  color: $color-surface;
+  overflow: hidden;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgb(0 0 0 / 35%);
+  }
+
+  &__content {
+    @include container;
+    position: relative;
+    z-index: 2;
+    max-width: rem(760);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: $spacing-lg;
+    color: $color-surface;
+    max-width: 32ch;
+  }
+
+  &__text {
+    margin-bottom: $spacing-xl;
+    max-width: 60ch;
+  }
+
+  &__arrows {
+    position: absolute;
+    right: 50%;
+    bottom: $spacing-lg;
+    z-index: 2;
+    width: rem(40);
+    height: rem(22);
+    transform: translateX(50%);
+  }
+
+  &__arrow-path {
+    fill: none;
+    stroke: $color-surface;
+    stroke-width: 2;
+  }
+}

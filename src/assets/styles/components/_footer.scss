@@ -1,0 +1,107 @@
+@use "../globals" as *;
+
+@use "../globals" as *;
+
+.footer {
+  margin-top: $spacing-3xl;
+  background-color: $color-light;
+  border-top: 1px solid $color-border;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-lg;
+    padding-block: $spacing-xl;
+    text-align: center;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    max-width: rem(560);
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__tagline {
+    margin: 0;
+    color: $color-muted;
+    font-family: $font-base;
+    font-size: rem(15);
+    line-height: 1.6;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md $spacing-lg;
+  }
+
+  &__link {
+    color: $color-text;
+    text-decoration: none;
+    font-family: $font-base;
+    font-size: rem(15);
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    color: $color-primary;
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-border;
+    padding-block: $spacing-md;
+  }
+
+  &__copy {
+    @include container;
+    margin: 0;
+    color: $color-muted;
+    font-family: $font-base;
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @include respond-md {
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      gap: $spacing-xl;
+    }
+
+    &__brand {
+      flex: 1;
+    }
+
+    &__nav {
+      justify-content: flex-end;
+      gap: $spacing-lg;
+    }
+
+    &__bottom {
+      padding-block: $spacing-md;
+    }
+
+    &__copy {
+      text-align: left;
+    }
+  }
+}

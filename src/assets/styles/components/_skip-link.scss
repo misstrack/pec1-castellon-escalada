@@ -1,0 +1,16 @@
+@use "../globals" as *;
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $spacing-md;
+  z-index: 1000;
+  padding: $spacing-sm $spacing-md;
+  color: $color-surface;
+  background-color: $color-primary-dark;
+  border-radius: $radius-sm;
+
+  &:focus {
+    top: $spacing-md;
+  }
+}

@@ -1,0 +1,26 @@
+@use "../globals" as *;
+
+
+.crags {
+  &__content {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+  }
+
+  &__intro {
+    max-width: 75ch;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacing-xl;
+
+    @include respond-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../globals" as *;
+
+
+.about {
+  @include container;
+  display: grid;
+  gap: $spacing-xl;
+  align-items: center;
+
+  @include respond-md {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-soft;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+  }
+
+  &__text + &__text {
+    margin-top: $spacing-md;
+  }
+
+  .btn {
+    margin-top: $spacing-lg;
+  }
+}

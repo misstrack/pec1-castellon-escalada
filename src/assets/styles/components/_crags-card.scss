@@ -1,0 +1,34 @@
+@use "../globals" as *;
+
+
+.crags-card {
+  overflow: hidden;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: $spacing-lg;
+  }
+
+  &__title {
+    margin-bottom: $spacing-sm;
+  }
+
+  &__text {
+    margin-bottom: $spacing-md;
+  }
+
+  &__meta {
+    font-size: rem(14);
+    color: $color-muted;
+    font-weight: 600;
+  }
+}

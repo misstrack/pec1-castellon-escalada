@@ -42,6 +42,12 @@
     "postcss-preset-env": "^11.1.2",
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.1.2",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "stylelint": "^17.6.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "leaflet": "^1.9.4"
   }
 }

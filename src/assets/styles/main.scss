@@ -1,20 +1,42 @@
 /**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
+ * Main stylesheet
+ * Only uses allowed here.
  */
 
-/**
- * Import dependencies
- */
+/* Dependencies */
 @use "dependencies";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+/* Settings */
+@use "settings/variables";
 
-@use "layouts/home";
+/* Tools */
+@use "tools/functions";
+@use "tools/mixins";
 
-/**
- * Do NOT include anything else in this file!
- */
+/* Generic */
+@use "generic/reset";
+@use "generic/base";
+
+/* Elements */
+@use "elements/typography";
+
+/* Objects 
+@use "objects/container"; */
+
+/* Components */
+@use "components/skip-link";
+@use "components/btn";
+@use "components/hero";
+@use "components/about";
+@use "components/map";
+@use "components/crags";
+@use "components/crags-card";
+@use "components/tips";
+@use "components/header";
+@use "components/footer";
+
+/* Utilities */
+@use "utilities/visually-hidden";
+
+/* External dependencies */
+@import "npm:@fortawesome/fontawesome-free/css/all.css";

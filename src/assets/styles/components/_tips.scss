@@ -1,0 +1,27 @@
+@use "../globals" as *;
+
+.tips {
+  background-color: $color-primary-dark;
+  color: $color-surface;
+
+  &__content {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: $spacing-lg;
+    color: $color-surface;
+  }
+
+  &__list {
+    display: grid;
+    gap: $spacing-md;
+  }
+
+  &__item {
+    padding: $spacing-md $spacing-lg;
+    background-color: rgb(255 255 255 / 10%);
+    border-left: rem(4) solid $color-secondary;
+    border-radius: $radius-md;
+  }
+}

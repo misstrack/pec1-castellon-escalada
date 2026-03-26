@@ -1,0 +1,25 @@
+@use "../globals" as *;
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  line-height: 1.2;
+  color: $color-primary-dark;
+}
+
+h1 {
+  font-size: fluid(29, 52, 320, 1024);
+}
+
+h2 {
+  font-size: fluid(22, 36, 320, 1024);
+}
+
+h3 {
+  font-size: fluid(18, 28, 320, 1024);
+}
+
+p {
+  font-size: rem(15);
+}

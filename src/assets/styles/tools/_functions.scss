@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+
+@function rgba-color($color, $opacity) {
+  @return rgba($color, $opacity);}
+  
+
+@function fluid-rem($min, $max, $min-vw, $max-vw, $base: 15) {
+  $min-rem: $min / $base;
+  $max-rem: $max / $base;
+
+  $slope: ($max-rem - $min-rem) / ($max-vw - $min-vw);
+  $intercept: $min-rem - $slope * $min-vw;
+
+  @return clamp(
+    #{$min-rem}rem,
+    #{$intercept}rem + #{$slope * 100}vw,
+    #{$max-rem}rem
+  );
+}
+

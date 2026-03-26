@@ -1,36 +1,338 @@
 <!doctype html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Escuelas de escalada en Castellón</title>
+    <meta
+      name="description"
+      content="Guía sobre escuelas de escalada en la provincia de Castellón: sectores, consejos y lugares recomendados para escalar."
+    />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" /> -->
+
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+
+    <!-- JS -->
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
+  </head>
+
+  <body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <!-- Header -->
+    <include src="./views/header.html"></include>
+
+    <main id="main-content">
+      <!-- Hero -->
+<section class="hero">
+  <picture class="hero__media">
+    <source
+      srcset="
+        ./assets/images/optimized/hero-640.webp 640w,
+        ./assets/images/optimized/hero-1024.webp 1024w,
+        ./assets/images/optimized/hero-1600.webp 1600w
+      "
+      type="image/webp"
+      sizes="100vw"
+    />
+    <img
+      class="hero__image"
+      src="./assets/images/optimized/hero-1024.webp"
+      srcset="
+        ./assets/images/optimized/hero-640.webp 640w,
+        ./assets/images/optimized/hero-1024.webp 1024w,
+        ./assets/images/optimized/hero-1600.webp 1600w
+      "
+      sizes="100vw"
+      alt="Paisaje de montaña y roca en Castellón"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
+
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <h1 class="hero__title">
+      Escuelas de escalada en Castellón: roca, montaña y Mediterráneo
+    </h1>
+
+    <p class="hero__text">
+      Castellón es uno de los destinos más atractivos para la escalada en la
+      Comunidad Valenciana. Su combinación de roca caliza, paisajes de interior
+      y sectores cercanos al mar convierte la provincia en un lugar ideal tanto
+      para quienes se inician como para escaladores con experiencia. En esta
+      guía encontrarás algunas de las escuelas más interesantes para descubrir y
+      disfrutar.
+    </p>
+
+    <a class="btn btn--light" href="#crags">
+      Descubre las escuelas
+    </a>
+  </div>
+
+  <svg
+    class="hero__arrows"
+    aria-hidden="true"
+    focusable="false"
+    viewBox="0 0 40 22"
+  >
+    <path
+      class="hero__arrow-path"
+      stroke-linecap="round"
+      d="M0 0 L20 22 L40 0"
+    ></path>
+  </svg>
+</section>
+
+      <!-- Sobre la guía -->
+      <section class="about" id="about">
+        <div class="about__figure">
+          <figure class="about__image-wrapper">
+            <img
+              class="about__image"
+              src="assets/images/Optimized/Penyagolosa14-1.webp"
+              alt="Montaña de castellon con cabritas"
+              width="800"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="visually-hidden">
+              Imagen de una escaladora en un paisaje de montaña
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="about__content">
+          <h2 class="about__title">Una provincia para escalar todo el año</h2>
+
+          <p class="about__text">
+            La provincia de Castellón ofrece una gran variedad de escuelas de
+            escalada repartidas entre la costa y el interior. Algunas destacan
+            por sus vías largas y técnicas; otras, por su accesibilidad o por
+            ser perfectas para pasar un día completo en la naturaleza. Esta web
+            reúne una pequeña selección de lugares recomendados para conocer la
+            riqueza vertical de este territorio.
+          </p>
+
+          <p class="about__text">
+            <strong>El objetivo de esta guía:</strong> ayudarte a descubrir
+            escuelas de escalada con encanto, conocer sus características
+            principales y animarte a visitar Castellón desde una mirada activa,
+            deportiva y respetuosa con el entorno.
+          </p>
+
+          <a
+            class="btn btn--dark btn--external"
+            href="https://www.thecrag.com/en/climbing/spain/castellon"
+            target="_blank"
+            rel="noopener"
+          >
+            Saber más sobre escalada en Castellón
+          </a>
+        </div>
+      </section>
+
+      <!-- Mapa -->
+      <section class="map" aria-labelledby="map-title">
+        <div class="map__content">
+          <h2 class="map__title" id="map-title">
+            Castellón vertical desde otra perspectiva
+          </h2>
+
+          <p class="map__intro">
+            Desde una vista amplia, el paisaje de Castellón revela paredes,
+            barrancos, sierras y rincones rocosos que atraen cada año a muchas
+            personas aficionadas a la escalada. Este vídeo sirve como
+            introducción visual a un territorio donde deporte y naturaleza van
+            de la mano.
+          </p>
+
+<div id="climbing-map" class="map__map"></div>
+
+          <span class="visually-hidden">
+            Vídeo de YouTube sobre paisajes de montaña y escalada.
+          </span>
+
+          <noscript>
+            <p class="map__fallback">
+              Mira el vídeo en
+              <a
+                href="https://www.youtube.com/watch?v=yWq2IFjkaWg"
+                rel="noopener"
+              >
+                YouTube
+              </a>.
+            </p>
+          </noscript>
+
+          <p class="map__text">
+            Escalar en Castellón significa disfrutar de roca caliza de gran
+            calidad, sectores variados y entornos muy distintos entre sí. En una
+            misma provincia es posible encontrar escuelas soleadas para invierno,
+            zonas más frescas para los meses cálidos y paisajes que combinan
+            montaña, bosque y proximidad al mar. Esa diversidad es una de sus
+            mayores fortalezas.
+          </p>
+        </div>
+      </section>
+
+<!-- Crags o Escuelas -->
+<section class="crags" id="crags" aria-labelledby="crags-title">
+  <div class="crags__content">
+    <h2 class="crags__title" id="crags-title">
+      Escuelas recomendadas en la provincia de Castellón
+    </h2>
+
+    <p class="crags__intro">
+      Esta selección reúne algunas zonas representativas del entorno de Castellón,
+      desde sectores cercanos a la Plana hasta rincones de interior más tranquilos.
+      Cada escuela ofrece una atmósfera distinta, por lo que conviene elegir según
+      el nivel, la época del año y el tipo de jornada que se busque.
+    </p>
+
+    <div class="crags__grid">
+
+      <!-- BOTALARIA -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/botalaria.webp" alt="Entorno rocoso en Borriol" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">La Botalària</h3>
+          <p class="crags-card__text">
+            Situada en el entorno de Borriol, La Botalària combina carácter y
+            relieve en un paisaje que se descubre poco a poco. Entre sus paredes
+            y recorridos, algunas vías dejan una huella especial, como si cada
+            tramo guardara una historia propia.
+          </p>
+          <p class="crags-card__meta">Nivel recomendado: intermedio</p>
+        </div>
+      </article>
+
+      <!-- FIGUEROLES -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/figueroles.webp" alt="Escalada en Figueroles" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">Figueroles</h3>
+          <p class="crags-card__text">
+            Figueroles destaca por su variedad de sectores y un ambiente que invita
+            a compartir la jornada. Es una escuela donde las casualidades parecen
+            ocurrir con facilidad y donde cualquier excusa puede convertirse en el
+            inicio de una nueva cordada.
+          </p>
+          <p class="crags-card__meta">
+            Nivel recomendado: intermedio y avanzado
+          </p>
+        </div>
+      </article>
+
+      <!-- ALCORA -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/rocadelmoli.webp" alt="Roca del Molí en l'Alcora" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">Roca del Molí (l'Alcora)</h3>
+          <p class="crags-card__text">
+            En l'Alcora, la escalada se mezcla con el paisaje de río y vegetación,
+            generando una experiencia más sensorial que técnica. El entorno invita
+            a detenerse, a recorrerlo con calma y a conectar con el terreno de una
+            forma más directa y cercana.
+          </p>
+          <p class="crags-card__meta">
+            Nivel recomendado: iniciación e intermedio
+          </p>
+        </div>
+      </article>
+
+      <!-- TORRE-XIVA -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/torrexiva.webp" alt="Escalada en Torre-Xiva" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">Torre-Xiva</h3>
+          <p class="crags-card__text">
+            Torre-Xiva ofrece un entorno tranquilo, rodeado de naturaleza, donde la
+            escalada se vive sin prisas. Entre senderos y bancales, el paisaje rural
+            aporta una identidad única que acompaña toda la jornada.
+          </p>
+          <p class="crags-card__meta">
+            Nivel recomendado: iniciación, intermedio y avanzado
+          </p>
+        </div>
+      </article>
+
+      <!-- CANTERA -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/cantera.webp" alt="La Cantera en Castellón" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">La Cantera</h3>
+          <p class="crags-card__text">
+            Cercana a Castellón, La Cantera es una opción accesible y directa,
+            ideal para jornadas cortas. A pesar de su carácter práctico, el entorno
+            permite apreciar la verticalidad de la roca y encontrar momentos de
+            calma en medio de la actividad.
+          </p>
+          <p class="crags-card__meta">Nivel recomendado: intermedio</p>
+        </div>
+      </article>
+
+      <!-- PETURRO -->
+      <article class="crags-card">
+        <img class="crags-card__image" src="./assets/images/optimized/peturro.webp" alt="El Peturro en Castellón" />
+        <div class="crags-card__body">
+          <h3 class="crags-card__title">El Peturro</h3>
+          <p class="crags-card__text">
+            El Peturro se sitúa en un entorno más discreto, donde el paisaje y la
+            roca se descubren sin grandes referencias. Es un lugar que invita a la
+            introspección, donde cada visita puede sentirse distinta y abierta a
+            nuevas interpretaciones.
+          </p>
+          <p class="crags-card__meta">Nivel recomendado: intermedio</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Consejos -->
+      <section class="tips" id="tips">
+        <div class="tips__content">
+          <h2 class="tips__title" id="tips-title">
+            Consejos para visitar estas escuelas
+          </h2>
+
+          <ul class="tips__list">
+            <li class="tips__item">
+              Consulta siempre el estado de los accesos y el equipamiento antes
+              de ir.
+            </li>
+            <li class="tips__item">
+              Respeta el entorno natural, evita hacer ruido innecesario y no
+              dejes residuos.
+            </li>
+            <li class="tips__item">
+              Escoge sectores adecuados a tu nivel y revisa el material antes de
+              comenzar la actividad.
+            </li>
+            <li class="tips__item">
+              Ten en cuenta la orientación de la pared y la época del año para
+              planificar mejor la jornada.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <include src="./views/footer.html"></include>
   </body>
 </html>

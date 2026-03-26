@@ -1,0 +1,85 @@
+@use "../globals" as *;
+
+
+.header {
+  background-color: $color-light;
+  border-bottom: 1px solid $color-border;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-md;
+    padding-block: $spacing-md;
+  }
+
+  &__brand {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  &__brand-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(56);
+    height: rem(56);
+    border-radius: $radius-md;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-surface;
+    font-family: $font-heading;
+    font-size: rem(28);
+    font-weight: 700;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  &__brand-link:hover,
+  &__brand-link:focus-visible {
+    transform: scale(1.05);
+    opacity: 0.9;
+    background-color: $color-primary-dark;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    width: 100%;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-text;
+    font-family: $font-base;
+    font-size: rem(16);
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    color: $color-primary;
+  }
+
+  @include respond-md {
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: $spacing-lg;
+      padding-block: $spacing-md;
+    }
+
+    &__nav {
+      justify-content: center;
+      width: auto;
+      gap: $spacing-lg;
+    }
+  }
+}
